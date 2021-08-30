@@ -24,6 +24,20 @@ type ExampleReply struct {
 
 // Add your RPC definitions here.
 
+const (
+	RequestTask = iota
+	FinishTask
+)
+
+type MapReduceArgs struct {
+	MessageType int
+	Task        *MapReduceTask
+}
+
+type MapReduceReply struct {
+	Task     *MapReduceTask
+	NReduces int
+}
 
 // Cook up a unique-ish UNIX-domain socket name
 // in /var/tmp, for the master.

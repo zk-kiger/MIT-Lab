@@ -10,11 +10,13 @@ package main
 // Please do not change this file.
 //
 
-import "../mr"
-import "plugin"
+import (
+	"../mr"
+	"log"
+	"plugin"
+)
 import "os"
 import "fmt"
-import "log"
 
 func main() {
 	if len(os.Args) != 2 {
